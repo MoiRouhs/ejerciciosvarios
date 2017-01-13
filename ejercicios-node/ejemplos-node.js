@@ -8,7 +8,7 @@ var cons = console.log;
 var carpetas = {};
 cons(direccion);
 cons(fsdir.length, fsdir);
-var lecturafile = fs.readFileSync("/home/ubuntu/workspace/static/info.html","utf-8"); // Leyando el contenido de un archivo
+var lecturafile = fs.readFileSync("ejemplos-node.js","utf-8"); // Leyando el contenido de un archivo
 /*----------------------------------- Buscando carpetas y crea un array con el contenido y la direccion de las carpetas encontradas ----------------------------*/
 for ( var i = 0 ; i <= (fsdir.length - 1); i ++ ){
     var subdir = fsdir[i];
