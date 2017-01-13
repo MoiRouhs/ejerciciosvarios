@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset='utf-8'>
+    <title>Notas Agente</title>
+    <link rel='stylesheet' type='text/css' href='../css/notas.css'>
+    <script src='../js/main.js'></script>
+    <script src='../js/notas.js'></script>
+  </head>
+<body>
+ <!--Cabezara Superior-->
+  <div id='barratitulo'>
+   <h1 class='titulonotas'>
+     <b id='colorn'>Notes</b>
+     <b id='rn1'>1</b>
+     <b id='rn2'>2</b>
+     <b id='rn3'>3</b>
+     <b id='rn4'>4</b>
+     <b id='rn5'>5</b>
+     <b id='rn6'> &#8645;</b>
+   </h1>
+   <div class='mover'></div>
+   <p class='simbol' id='minimizar'> &#9662; </p>
+   <p class='simbol' id='cerrar'> &#9830; </p>
+  </div>
+ <!-- Recuadros Superiores -->
+  <div class='pantallasuperior visible' id='n1'></div>
+  <div class='pantallasuperior' id='n2'></div>
+  <div class='pantallasuperior' id='n3'></div>
+  <div class='pantallasuperior' id='n4'></div>
+  <div class='pantallasuperior' id='n5'></div>
+  <div class='pantallasuperior' id='n6'></div>
+
+ <!-- Recuadros Inferiores -->
+ <!--Cabezara Superior-->
+  <div id='barratitulo2'>
+   <a href='#links'>
+     <h1 class='titulonotas'>Links</h1>
+   </a>
+   <a href='#infoNum'>
+     <h1 class='titulonotas'>Info</h1>
+   </a>
+   <a id='dics' href='#dic'>
+   <h1 class='titulonotas'>Dic</h1>
+   </a>
+  </div>
+  <!-- Fin de RECUADRO INFERIOR -->
+
+  <div id='links'>
+    <a class='cerrar' href='#'>X</a>
+    <div class='contenedor'>
+    <a href='xxxxxxxxxx' target='blank'>
+      <img src='../img/sugar.png'>
+    </a>
+    <a href='xxxxxx' target='blank'>
+      <img src='../img/kc.png'>
+    </a>
+    <a href='xxxxxxxxx' target='blank'>
+      <img src='../img/global.png'>
+    </a>
+    <a href='https://www.google.com.co' target='blank'>
+      <img src='../img/google.png'>
+    </a>
+  </div>
+  <div class='contenedor'>
+    <a href='https://tools.usps.com/go/ZipLookupAction_input' target='blank'>
+      <img src='../img/usps.png'>
+    </a>
+    <a href='https://www.canadapost.ca/cpo/mc/personal/postalcode/fpc.jsf' target='blank'>
+      <img src='../img/canada.png'>
+    </a>
+    <a href='xxxxxx' target='blank'>
+      <img src='../img/rma.png'>
+    </a>
+    <a href='xxxxx' target='blank'>
+      <img src='../img/es.png'>
+    </a>
+  </div>
+  <div class='contenedor'>
+    <a href='http://us200k8web01/htc/rma/?CategoryID=454' target='blank'>
+      <img src='../img/fr.png'>
+    </a>
+    <a href='http://www.htc.com/us/' target='blank'>
+      <img src='../img/nam.png'>
+    </a>
+    <a href='http://www.htc.com/ca-fr/' target='blank'>
+      <img src='../img/cafr.png'>
+    </a>
+    <a href='http://www.htc.com/latam/' target='blank'>
+      <img src='../img/latam.png'>
+    </a>
+  </div>
+  </div>
+  <div id='infoNum'>
+    <a class='cerrar' href='#'>X</a>
+     <table> <!-- Lo cambiaremos por CSS -->
+           <tr class='cabezera'>
+              <td>Departamento</td>
+              <td>Número Tel.</td>
+          </tr>
+          <tr class='num'>
+              <td>RRRRR</td>
+              <td>188956</td>
+          </tr>
+          <tr class='num'>
+              <td>sssss</td>
+              <td>444441</td>
+          </tr>
+          <tr class='num'>
+              <td>us-en</td>
+              <td>8358</td>
+          </tr>
+          <tr class='num'>
+              <td>us-es</td>
+              <td>0960</td>
+          </tr>
+          <tr class='num'>
+              <td>ca-fr</td>
+              <td>5370</td>
+          </tr>
+        </table>
+    <h3>Reparaciones</h3>
+    <p>Enviar desde el <a href='xxxxxxx' target='block'>correo</a> la siguiente información:</p>
+    <pre>
+      Nombre de cliente:
+      Correo de cliente:
+      País:
+      Fecha de contacto :
+      Hora contacto:
+      Ticket Number:
+      Comentarios:
+   </pre>
+    <h3>Asistencia por correo electrónico</h3>
+     <pre>
+       <a href="xxxxxxxxxx" target='block'>
+         xxxxxxxxxxxxxxx</a>
+                 xxxxxxxxxxx
+     </pre>
+  </div>
+  <div id='dic'>
+    <p id='diccambio'>wk</p>
+    <a class='cerrar' href='#'>X</a>
+    <webview id='dicsaver'src="http://www.wordreference.com">
+    </webview>
+  </div>
+ </div>
+</body>
+</html>
