@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Notas",
+  "version": "0.8",
+  "minimum_chrome_version": "23",
+  "icons": {
+    "128": "img/icon.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["js/main.js"]
+    }
+  },
+  "permissions": [
+   "webview",
+   {"fileSystem": ["write", "retainEntries", "directory"]},
+    "storage"
+  ],
+ "file_handlers": {
+    "text": {
+      "types": [
+          "text/*"
+      ]
+    }
+  }
+}
