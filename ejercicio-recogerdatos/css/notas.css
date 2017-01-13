@@ -1,0 +1,320 @@
+/* ------- Para todo el documento ------ */
+*{
+  font-family: "helvetica";
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #eceff1;
+}
+/*------- Scrollbar --------*/
+::-webkit-scrollbar{
+    width: 0px;
+}
+/* ------ Cabezera UI --------- */
+#barratitulo, #barratitulo2{
+  color: white;
+  width: 100%;
+  height: 35px;
+  box-shadow: 0px 1px 8px black;
+  display: flex;
+  z-index: 100;
+  font-size: 14px;
+}
+#barratitulo{
+  background-color: #00bcd4;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#barratitulo2{
+  background-color: #D50000;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  position: absolute;
+  top: 462px;
+  left: 0;
+}
+.titulonotas{
+  line-height: 1.35;
+  margin-left: 5px;
+}
+.mover{
+  -webkit-app-region: drag;
+  -moz-app-region: drag;
+  flex-grow: 4;
+  -webkit-cursor: all-scroll;
+}
+#rn1,#rn2,#rn3,#rn4,#rn5,#rn6{
+  line-height: 1.5;
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+#rn1:hover,#rn2:hover,#rn3:hover,#rn4:hover,#rn5:hover,#rn6:hover{
+  line-height: 1;
+  font-size: 27px;
+}
+#colorn{
+  color:#ffe0b2;
+}
+#rn1{
+  color:#ffe0b2;
+}
+
+#minimizar{
+  font-size: 2em;
+  //margin-top: 4px;
+}
+#minimizar:hover{
+  color: #ff9800;
+}
+#cerrar{
+  font-size: 1.8em;
+  margin: 0px 5px 0px 7px;
+}
+#cerrar:hover{
+  color: red;
+}
+/*-------- Recuadros superiores -----------*/
+.pantallasuperior{
+  width: 97%;
+  height: 420px;
+  font-size: 12.5px;
+  margin: 0 1.5% 0 1.5%;
+  overflow: auto;
+  box-shadow: 0px 2px 4px black;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index:90;
+  transition:0.75s;
+}
+.visible{
+  position: absolute;
+  top: 35.1px;
+  left: 0;
+  z-index:89;
+  transition:0.75s;
+}
+#n1{
+  background-color: #ffe0b2;
+}
+#n2{
+  background-color: #E6EE9C;
+}
+#n3{
+  background-color: #C8E6C9;
+}
+#n4{
+  background-color: #D1C4E9;
+}
+#n5{
+  background-color: #FFCDD2;
+}
+#n6{
+  padding: 0px 0px 0px 5px;
+  background-color: #d7ccc8;
+  -webkit-user-select: text;
+}
+/*--------- Formulario ---------------*/
+form{
+  margin: 10px 5px;
+}
+fieldset{
+  padding: 3px;
+  margin-bottom: 7.5px;
+}
+/*------- Input con diferentes tamaños --------*/
+input{
+  background-color: #fff3e0;
+  margin: 4px 0px;
+  border: 0;
+  border-bottom: 1px solid #795548;
+}
+.generico{
+  width: 35vw;
+}
+.apro{
+  width: 45vw;
+}
+.issue{
+  width: 85vw;
+}
+.mediano{
+  width: 81vw;
+}
+.checkbox{
+  //margin: 0px 0px 0px 0px;
+  width: 5px;
+}
+/*------- Fin de input con diferentes tamaños --------*/
+a{
+  text-decoration:none;
+  color: blue;
+}
+a:hover{
+  color:#000000;
+}
+textarea{
+  background-color: #fff3e0;
+  max-width: 99%;
+  height: 85px;
+  overflow: auto;
+  margin-bottom: 7.5px;
+}
+select{
+  background-color: #fff3e0;
+}
+#cysn1,#cysn2,#cysn3,#cysn4,#cysn5{
+  width: 90px;
+  background-color: #CDDC39;
+  border: 1.5px solid #827717;
+  position: absolute;
+  right: 3px;
+  bottom: 0px;
+}
+/*------------------ Paneles inferiones ----------------------*/
+#links, #infoNum, #dic{
+  width: 97%;
+  margin: 0 1.5% 0 1.5%;
+  background-color: #FFFFFF;
+  overflow: auto;
+  transition:0.35s;
+  box-shadow: 0px 2px 4px black;
+  position: fixed;
+  left: -100%;
+  z-index:89;
+  font-size: 12px;
+}
+#links:target{
+  padding-top:60px;
+  left: 0%;
+}
+#dic:target{
+  overflow:hidden;
+  padding-top:3px;
+  left: 0%;
+}
+#infoNum:target{
+    background-color:#FFE082;
+    left: 0%;
+}
+/*------- Boton cerrar --------*/
+  .cerrar{
+    position:absolute;
+    top:3%;
+    right:2.5%;
+    font-size: 2em;
+    text-decoration:none;
+    font-weight:900;
+    z-index:98;
+  }
+  .cerrar:hover{
+    top:2.5%;
+    font-size:2.75em;
+  }
+/*------- Boton Cambio de Diccionasrio --------*/
+#diccambio{
+  position:absolute;
+  top:10%;
+  right:2%;
+  font-size: 1.5em;
+  font-weight:900;
+  z-index:98;
+}
+#diccambio:hover{
+  top:9%;
+  font-size:2em;
+}
+/*------- Información Numeros --------*/
+  table{
+      width: 300px;
+      border: 3px solid #000;
+      margin-top:4%;
+      margin-left:10%;
+      text-align:center;
+  }
+  .num{
+    font-weight: 700;
+    font-size:1.2em;
+    color: #1A237E;
+  }
+  .num:hover{
+    background-color:#B3E5FC;
+  }
+  td{
+    border: 1.2px solid #001;
+  }
+  .cabezera{
+    background-color: #212121;
+    font-size: 1.4em;
+    color: white;
+    font-weight: 900;
+  }
+  h3{
+    color:#009688;
+    text-align:center;
+    margin-top: 15px;
+    margin-bottom: 10;
+  }
+  p, pre{
+    font-size:1.1em;
+    margin-left:5%;
+  }
+  pre:hover{
+    background-color:yellow;
+    font-weight: 600;
+}
+/*------- Imagenes enlaces --------*/
+.contenedor{
+  width: 100%;
+  display: inline-flex;
+  margin: 2.5px 0 0 0.4px;
+  }
+img{
+  width:97%;
+  -webkit-filter: grayscale(1);
+  }
+img:hover{
+  -webkit-filter: grayscale(0);
+  -webkit-transform: rotate(360deg);
+  transition:0.3s;
+}
+webview{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  border:0;
+}
+
+/*------------ Pantalla pequeña --------------*/
+@media (min-height: 700px){
+  #links, #infoNum, #dic{
+    top: 496px;
+    bottom:0.75%;
+  }
+  #links:target{
+    padding-top:60px;
+    left: 0%;
+  }
+  #dic:target{
+    overflow:hidden;
+    padding-top:3px;
+    left: 0%;
+  }
+  #infoNum:target{
+    -webkit-user-select: text;
+    background-color:#FFE082;
+    left: 0%;
+  }
+}
+/*------------ Pantalla alta --------------*/
+@media (max-height: 699px){
+  #links, #infoNum, #dic{
+    -webkit-user-select: text;
+    top: 35.1px;
+    left: -100;
+    bottom:35.1px;
+  }
+}
