@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title> asignaciones de eventos</title>
+  <script type="text/javascript" src="aisgnacion.js"></script>
+</head>
+<body>
+  <h1 id="link">Click Js</h1> 
+<!-- 
+  Como vemos para el caso de asignacion de eventos por js solo necesitamos tener un identificador, en este caso es 'id',
+  este identificador es el que conecta al evento con el elemento en pantalla
+-->
+  <h1 onclick="contarhtml()">Click Html</h1>
+  <!--
+    Al asignar eventos desde el html es necesario poner el evento seguido de un igual y entre comillas la función a ejecutar,
+    tambien dentro de estas comillas se pueden pasar varias funciones a la vez separandolas con ';' y los parametros delas funciones
+    dentro de los () así:
+      onclick="contarhtml()" *** onclick="contarhtml('parametro')" *** onclick="contarhtml1();contarhtml2()" 
+  -->
+</body>
+</html>
