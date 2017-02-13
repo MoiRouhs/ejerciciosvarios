@@ -1,3 +1,4 @@
+var survey = [0,0];
 var numnote = {
   'n1':'#ffe0b2',
   'n2':'#E6EE9C',
@@ -10,8 +11,9 @@ var numnote = {
 function clonNotas(){
   for (i=1; i<=5; i++){
     var divinsert = document.getElementById('n'+i);
-    divinsert.innerHTML = "<form> <fieldset> <legend>Personal information: </legend>Name: <input type='text' class='mediano' id='firstnamen"+i+"'><br> Phone: <input type='tel' class='generico' id='phonen"+i+"'> E-mail: <input type='text' class='generico' id='emailn"+i+"'> </fieldset> <fieldset> <legend>Device information:</legend> Carrier: <input type='text' class='generico' id='carriern"+i+"'> S/N: <input type='text' class='generico' id='imein"+i+"'><br> Model: <input type='text' class='generico' id='modeln"+i+"'><br> </fieldset> Issue: <input class='issue' type='text' id='issuen"+i+"'><br> Extra &#92; TS: <input type='checkbox' calss='checkbox' id='ts1n"+i+"' value='Soft Reset'><a href='#' title='Soft Reset'>SR</a> <input type='checkbox' calss='checkbox' id='ts2n"+i+"' value='Hard Reset'><a href='#' title='Hard Reset'>HR</a> <input type='checkbox' calss='checkbox' id='ts3n"+i+"' value='Safe Mode'><a href='#' title='Safe Mode'>SM</a> <input type='checkbox' calss='checkbox' id='ts4n"+i+"' value='Clear App'><a href='#' title='Clear App'>CA</a> <input type='checkbox' calss='checkbox' id='ts5n"+i+"' value='Wipe cache partition'><a href='#' title='Wipe cache partition'>WCP</a> <input type='checkbox' calss='checkbox' id='ts6n"+i+"' value='Factory data reset'><a href='#' title='Factory data reset'>FDR</a> <input type='checkbox' calss='checkbox' id='ts7n"+i+"' value='Rom update utility'><a href='#' title='Rom update utility'>RUU</a> <input type='checkbox' calss='checkbox' id='ts8n"+i+"' value='Battery reset'><a href='#' title='Battery reset'>BR</a> <br> <textarea cols='1000' id='troubleshootingn"+i+"'></textarea><br> Address: <input class='mediano' type='text' id='addressn"+i+"'><br> Address was verified in <select id='postn"+i+"'> <option value=''></option> <option value='USPS'>USPS</option> <option value='Canada Post'>Canada post</option> </select><br> Read: <input class='issue' type='text' id='readn"+i+"'><br> and Customer agreed. Approved by <input type='text' class='apro' id='approven"+i+"'> <input type='reset' id='cysn"+i+"' value='Copy & save'> </form>";
+    divinsert.innerHTML = "<form> <fieldset> <legend>Personal information: </legend>Name: <input type='text' class='mediano' id='firstnamen"+i+"'><br> Phone: <input type='tel' class='generico' id='phonen"+i+"'> E-mail: <input type='text' class='generico' id='emailn"+i+"'> </fieldset> <fieldset> <legend>Device information:</legend> Carrier: <input type='text' class='generico' id='carriern"+i+"'> S/N: <input type='text' class='generico' id='imein"+i+"'><br> Model: <input type='text' class='generico' id='modeln"+i+"'> Survey <input type='checkbox' calss='checkbox' id='encun"+i+"' value='si'> Origin <select id='origenn"+i+"'> <option value='none'></option> <option value='Box'>Box</option> <option value='H-boot'>H-boot</option> <option value='Carrier'>Carrier</option> <option value='Sim tray'>Sim tray</option> <option value='Sticker'>Sticker</option> <option value='Setting'>Setting</option> <option value='Receipt'>Receipt</option> <option value='*#06#'>*#06#</option> </select> <br> </fieldset> Issue: <input class='issue' type='text' id='issuen"+i+"'><br> Extra &#92; TS: <input type='checkbox' calss='checkbox' id='ts1n"+i+"' value='Soft Reset'><a href='#' title='Soft Reset'>SR</a> <input type='checkbox' calss='checkbox' id='ts2n"+i+"' value='Hard Reset'><a href='#' title='Hard Reset'>HR</a> <input type='checkbox' calss='checkbox' id='ts3n"+i+"' value='Safe Mode'><a href='#' title='Safe Mode'>SM</a> <input type='checkbox' calss='checkbox' id='ts4n"+i+"' value='Clear App'><a href='#' title='Clear App'>CA</a> <input type='checkbox' calss='checkbox' id='ts5n"+i+"' value='Wipe cache partition'><a href='#' title='Wipe cache partition'>WCP</a> <input type='checkbox' calss='checkbox' id='ts6n"+i+"' value='Factory data reset'><a href='#' title='Factory data reset'>FDR</a> <input type='checkbox' calss='checkbox' id='ts7n"+i+"' value='Rom update utility'><a href='#' title='Rom update utility'>RUU</a> <input type='checkbox' calss='checkbox' id='ts8n"+i+"' value='Battery reset'><a href='#' title='Battery reset'>BR</a> <br> <textarea cols='1000' id='troubleshootingn"+i+"'></textarea><br> Address: <input class='mediano' type='text' id='addressn"+i+"'><br> Address was verified in <select id='postn"+i+"'> <option value=''></option> <option value='USPS'>USPS</option> <option value='Canada Post'>Canada post</option> </select><br> Read: <input class='issue' type='text' id='readn"+i+"'><br> and Customer agreed. Approved by <input type='text' class='apro' id='approven"+i+"'> <input type='reset' id='cysn"+i+"' value='Copy & save'> </form>";
   };
+
   Object.keys(numnote).forEach(function(e){ // agrega el click para ingresar a cada nota]
     var bnote = document.getElementById('r'+e);
       bnote.addEventListener('click',function(){cambio(e)}, false);
@@ -52,8 +54,22 @@ function cambio(arg){
 /*----- Cabezera de las notas en historial -----*/
 function cabezera(){
    var f = new Date();
-   var fecha ="<#-#-#-#-#-#-#-#-~-~-~------- "+f.getHours()+":"+f.getMinutes()+" -------~-~-~-#-#-#-#-#-#-#-#>";
-   return  fecha ;
+   var tercio = survey[1]/3;
+  /*------------- Por diversión----------*/
+   var carita = function(){
+     if (survey[0] >= 0 && (survey[0] <= tercio)){
+        return '( ˘︹˘ )';
+     }else if(survey[0] > tercio && survey[0] <= tercio*2){
+        return '( ㆆ_ㆆ )';
+     }else if(survey[0] > tercio*2 && survey[0] <= survey[1]){
+        return '( ^ ◡ ^ )';
+     };
+  };
+  /*------------- se acabo la diversión----------*/
+
+  var fecha ="<#-#-#~------- "+f.getHours()+":"+f.getMinutes()+" ~~ "+ carita() +" ~~ Survey:"+survey[0]+"/"+survey[1]+" -------~#-#-#>";
+
+  return  fecha ;
 }
 
 /*----- copiar elc ontenido del formulario en la papelera -----*/
@@ -82,7 +98,7 @@ String.prototype.capitular = function(){
      });
      return nuevoTexto.join(' ');
 };
-/*----- Itineracion troubleshooting -----*/
+/*----- Itineración troubleshooting -----*/
 function itinerats(ar){
  var tslist = [];
    for(var t = 1; t <= 8; t++){
@@ -98,14 +114,15 @@ function itinerats(ar){
 function altoque(id){
   var d = document.getElementById(id);
   var tap = event.keyCode;
-  if (tap == 32 || tap == 9){
+  if (tap == 65 || tap == 69 ||tap == 73 ||tap == 79 || tap == 85 || tap == 9){
    d.value = d.value.capitular();
   };
 }
-/*----- Captura de la informacion del cliente -----*/
+/*----- Captura de la información del cliente -----*/
 function infocliente(arg){
+    survey[1] ++;
    var contenedorsalida = document.getElementById('n6');
-   /*----- Informacion Personal -----*/
+   /*----- Información Personal -----*/
    var nombre = document.getElementById('firstname'+ arg).value;
    var telefono = document.getElementById('phone'+arg).value.sinEspacio();
    var correo = document.getElementById('email'+arg).value.sinEspacio();
@@ -116,20 +133,28 @@ function infocliente(arg){
    var operador = document.getElementById('carrier'+arg).value.letraCapital();
    var sn = document.getElementById('imei'+ arg).value.sinEspacio().toUpperCase();
    var modelo = document.getElementById('model'+arg).value.toUpperCase();
+   var encuesta = document.getElementById('encu'+arg);
+   var origen = document.getElementById('origen'+arg).value;
 
    /*---------- Problema y proceso --------------*/
    var problema = document.getElementById('issue'+arg).value;
    var proceso = document.getElementById('troubleshooting'+arg).value;
-   /* var solucion = document.getElementById('resolution').value;*/
 
-   /*------------ Informacion para eparacion -----------------*/
+   /*------------ Informacion para reparación -----------------*/
    var condiciones = document.getElementById('read'+arg).value;
    var aprovacion = document.getElementById('approve'+arg).value;
 
    var cliente = [nombre,telefono,operador,correo,sn,problema,
-                 proceso,modelo,direccion,postal,condiciones,aprovacion];
+                 proceso,modelo,origen,direccion,postal,condiciones,aprovacion];
 
-   for (var i = 0; i < cliente.length -1; i++) {
+  /*------------ Información de las encuentas ofrecidas  -----------------*/
+  if (encuesta.checked == true){
+    survey[0] ++;
+  };
+
+
+  /*------------ Imprime información problema -----------------*/
+  for (var i = 0; i < cliente.length -1; i++) {
     var j = cliente[i];
      if( "" !== j ){
         var id = j+sn;
@@ -137,14 +162,14 @@ function infocliente(arg){
         contenedorsalida.innerHTML+='<br>'+ cabezera();
         contenedorsalida.innerHTML+="<div id="+id+"></div>";
         var salida = document.getElementById(id);
-  /*------------ Imprime informacion problema -----------------*/
+
         if("" !== problema){
            salida.innerHTML+='<br>Issue: '+ problema;
         }
         if("" !== proceso){
            salida.innerHTML+='<br>Troubleshooting: '+ itinerats(arg)+'<br>Extra troubleshooting: '+ proceso;
         }
-  /*------------ Imprime informacion cliente -----------------*/
+  /*------------ Imprime información cliente -----------------*/
         if("" !== nombre || "" !== telefono || "" !== correo || "" !== direccion){
            salida.innerHTML+='<br><b>HTC Customer</b>';
           if("" !== nombre){
@@ -161,10 +186,10 @@ function infocliente(arg){
           }
         }
   /*------------ Imprime informacion dispositivo -----------------*/
-        if("" !== sn || "" !== modelo || "" !== operador){
+        if("" !== sn ||"" !== origen || "" !== modelo || "" !== operador){
           salida.innerHTML+='<br><b>HTC Device</b>';
           if("" !== sn){
-             salida.innerHTML+='<br>S/N: '+ sn;
+             salida.innerHTML+='<br>S/N: '+ sn +' from: '+origen;
           }
           if("" !== modelo){
              salida.innerHTML+='<br>Model: '+ modelo;
@@ -212,3 +237,4 @@ window.addEventListener('load', function(){
    clonNotas();
    document.querySelector("#diccambio").addEventListener('click',camDic, false);
 },false);
+
