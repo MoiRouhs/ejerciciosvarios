@@ -11,7 +11,7 @@ var numnote = {
 function clonNotas(){
   for (i=1; i<=5; i++){
     var divinsert = document.getElementById('n'+i);
-    divinsert.innerHTML = "<form> <fieldset> <legend>Personal information: </legend>Name: <input type='text' class='mediano' id='firstnamen"+i+"'><br> Phone: <input type='tel' class='generico' id='phonen"+i+"'> E-mail: <input type='text' class='generico' id='emailn"+i+"'> </fieldset> <fieldset> <legend>Device information:</legend> Carrier: <input type='text' class='generico' id='carriern"+i+"'> S/N: <input type='text' class='generico' id='imein"+i+"'><br> Model: <input type='text' class='generico' id='modeln"+i+"'> Survey <input type='checkbox' calss='checkbox' id='encun"+i+"' value='si'> Origin <select id='origenn"+i+"'> <option value='none'></option> <option value='Box'>Box</option> <option value='H-boot'>H-boot</option> <option value='Carrier'>Carrier</option> <option value='Sim tray'>Sim tray</option> <option value='Sticker'>Sticker</option> <option value='Setting'>Setting</option> <option value='Receipt'>Receipt</option> <option value='*#06#'>*#06#</option> </select> <br> </fieldset> Issue: <input class='issue' type='text' id='issuen"+i+"'><br> Extra &#92; TS: <input type='checkbox' calss='checkbox' id='ts1n"+i+"' value='Soft Reset'><a href='#' title='Soft Reset'>SR</a> <input type='checkbox' calss='checkbox' id='ts2n"+i+"' value='Hard Reset'><a href='#' title='Hard Reset'>HR</a> <input type='checkbox' calss='checkbox' id='ts3n"+i+"' value='Safe Mode'><a href='#' title='Safe Mode'>SM</a> <input type='checkbox' calss='checkbox' id='ts4n"+i+"' value='Clear App'><a href='#' title='Clear App'>CA</a> <input type='checkbox' calss='checkbox' id='ts5n"+i+"' value='Wipe cache partition'><a href='#' title='Wipe cache partition'>WCP</a> <input type='checkbox' calss='checkbox' id='ts6n"+i+"' value='Factory data reset'><a href='#' title='Factory data reset'>FDR</a> <input type='checkbox' calss='checkbox' id='ts7n"+i+"' value='Rom update utility'><a href='#' title='Rom update utility'>RUU</a> <input type='checkbox' calss='checkbox' id='ts8n"+i+"' value='Battery reset'><a href='#' title='Battery reset'>BR</a> <br> <textarea cols='1000' id='troubleshootingn"+i+"'></textarea><br> Address: <input class='mediano' type='text' id='addressn"+i+"'><br> Address was verified in <select id='postn"+i+"'> <option value=''></option> <option value='USPS'>USPS</option> <option value='Canada Post'>Canada post</option> </select><br> Read: <input class='issue' type='text' id='readn"+i+"'><br> and Customer agreed. Approved by <input type='text' class='apro' id='approven"+i+"'> <input type='reset' id='cysn"+i+"' value='Copy & save'> </form>";
+    divinsert.innerHTML = "<form> <fieldset> <legend>Personal information: </legend>Name: <input type='text' class='mediano' id='firstnamen"+i+"'><br> Phone: <input type='tel' class='generico' id='phonen"+i+"'> E-mail: <input type='text' class='generico' id='emailn"+i+"'> </fieldset> <fieldset> <legend>Device information:</legend> Carrier: <input type='text' class='generico' id='carriern"+i+"'> S/N: <input type='text' class='generico' id='imein"+i+"'><br> Model: <input type='text' class='generico' id='modeln"+i+"'> Survey <input type='checkbox' calss='checkbox' id='encun"+i+"' value='si'> Origin <select id='origenn"+i+"'> <option value='none'></option> <option value='Setting'>Setting</option> <option value='H-boot'>H-boot</option> <option value='*#06#'>*#06#</option> <option value='Box'>Box</option> <option value='Sim tray'>Sim tray</option> <option value='Sticker'>Sticker</option> <option value='Carrier'>Carrier</option> <option value='Receipt'>Receipt</option> </select> <br> </fieldset> Issue: <input class='issue' type='text' id='issuen"+i+"'><br> Extra &#92; TS: <input type='checkbox' calss='checkbox' id='ts1n"+i+"' value='Soft Reset'><a href='#' title='Soft Reset'>SR</a> <input type='checkbox' calss='checkbox' id='ts2n"+i+"' value='Hard Reset'><a href='#' title='Hard Reset'>HR</a> <input type='checkbox' calss='checkbox' id='ts3n"+i+"' value='Safe Mode'><a href='#' title='Safe Mode'>SM</a> <input type='checkbox' calss='checkbox' id='ts4n"+i+"' value='Clear App'><a href='#' title='Clear App'>CA</a> <input type='checkbox' calss='checkbox' id='ts5n"+i+"' value='Wipe cache partition'><a href='#' title='Wipe cache partition'>WCP</a> <input type='checkbox' calss='checkbox' id='ts6n"+i+"' value='Factory data reset'><a href='#' title='Factory data reset'>FDR</a> <input type='checkbox' calss='checkbox' id='ts7n"+i+"' value='Rom update utility'><a href='#' title='Rom update utility'>RUU</a> <input type='checkbox' calss='checkbox' id='ts8n"+i+"' value='Battery reset'><a href='#' title='Battery reset'>BR</a> <br> <textarea cols='1000' id='troubleshootingn"+i+"'></textarea><br> Address: <input class='mediano' type='text' id='addressn"+i+"'><br> Address was verified in <select id='postn"+i+"'> <option value=''></option> <option value='USPS'>USPS</option> <option value='Canada Post'>Canada post</option> </select><br> Read: <input class='issue' type='text' id='readn"+i+"'><br> and Customer agreed. Approved by <input type='text' class='apro' id='approven"+i+"'> <input type='reset' id='cysn"+i+"' value='Copy & save'> </form>";
   };
 
   Object.keys(numnote).forEach(function(e){ // agrega el click para ingresar a cada nota]
@@ -22,7 +22,8 @@ function clonNotas(){
     console.log(e);
       if (e != 'n6'){
         document.querySelector("#cys"+e).addEventListener('click',function(){infocliente(e)}, false);
-        document.querySelector('#firstname'+e).addEventListener('keydown',function(){altoque('firstname'+e)});
+        document.querySelector('#firstname'+e).addEventListener('keydown',function(){altoque('firstname'+e, 9)});
+        document.querySelector('#firstname'+e).addEventListener('keyup',function(){altoque('firstname'+e, 32)});
       };
   });
 };
@@ -67,12 +68,12 @@ function cabezera(){
   };
   /*------------- se acabo la diversión----------*/
 
-  var fecha ="<#-#-#~------- "+f.getHours()+":"+f.getMinutes()+" ~~ "+ carita() +" ~~ Survey:"+survey[0]+"/"+survey[1]+" -------~#-#-#>";
+  var fecha ="<#-#~------- "+f.getHours()+":"+f.getMinutes()+" ~~ "+ carita() +" ~~ Survey:"+survey[0]+"/"+survey[1]+" -------~#-#>";
 
   return  fecha ;
 }
 
-/*----- copiar elc ontenido del formulario en la papelera -----*/
+/*----- copiar el contenido del formulario en la papelera -----*/
 function copiar(algo){
    var es = algo;
    var range = document.createRange();
@@ -111,16 +112,17 @@ function itinerats(ar){
    return tslist.toString();
 }
 /*----- Al precionar espacio capitula el texto -----*/
-function altoque(id){
+function altoque(id,tecla){
   var d = document.getElementById(id);
   var tap = event.keyCode;
-  if (tap == 65 || tap == 69 ||tap == 73 ||tap == 79 || tap == 85 || tap == 9){
+  if (tap == tecla){
    d.value = d.value.capitular();
   };
 }
 /*----- Captura de la información del cliente -----*/
 function infocliente(arg){
     survey[1] ++;
+  var salidafile ;
    var contenedorsalida = document.getElementById('n6');
    /*----- Información Personal -----*/
    var nombre = document.getElementById('firstname'+ arg).value;
@@ -160,54 +162,71 @@ function infocliente(arg){
         var id = j+sn;
             id = id.replace(/ /gi,'-')
         contenedorsalida.innerHTML+='<br>'+ cabezera();
+        salidafile =  '\n'+ cabezera() + '\n';
         contenedorsalida.innerHTML+="<div id="+id+"></div>";
         var salida = document.getElementById(id);
 
         if("" !== problema){
            salida.innerHTML+='<br>Issue: '+ problema;
+           salidafile = salidafile +'Issue: '+ problema +"\n";
         }
         if("" !== proceso){
            salida.innerHTML+='<br>Troubleshooting: '+ itinerats(arg)+'<br>Extra troubleshooting: '+ proceso;
+           salidafile = salidafile +'Troubleshooting: '+ itinerats(arg) +'\nExtra troubleshooting: '+ proceso +'\n';
         }
   /*------------ Imprime información cliente -----------------*/
         if("" !== nombre || "" !== telefono || "" !== correo || "" !== direccion){
            salida.innerHTML+='<br><b>HTC Customer</b>';
+           salidafile = salidafile + '\nHTC Customer\n';
           if("" !== nombre){
              salida.innerHTML+='<br>Name: '+ nombre;
+             salidafile = salidafile +'Name: '+ nombre +'\n';
           }
           if("" !== telefono){
              salida.innerHTML+='<br>Phone: '+ telefono;
+             salidafile = salidafile +'Phone: '+ telefono +'\n';
           }
           if("" !== correo){
              salida.innerHTML+='<br>E-mail: '+ correo;
+             salidafile = salidafile +'E-mail: '+ correo +'\n';
           }
           if("" !== direccion){
              salida.innerHTML+='<br>Address: '+ direccion +' Address was verified in '+ postal;
+             salidafile = salidafile +'Address: '+ direccion + ' Address was verified in '+ postal +'\n';
           }
         }
   /*------------ Imprime informacion dispositivo -----------------*/
         if("" !== sn ||"" !== origen || "" !== modelo || "" !== operador){
           salida.innerHTML+='<br><b>HTC Device</b>';
+          salidafile = salidafile +'\nHTC Device\n';
           if("" !== sn){
              salida.innerHTML+='<br>S/N: '+ sn +' from: '+origen;
+             salidafile = salidafile +'S/N: '+ sn +' from: '+ origen + '\n';
           }
           if("" !== modelo){
              salida.innerHTML+='<br>Model: '+ modelo;
+             salidafile = salidafile +'Model: '+ modelo + '\n';
           }
           if("" !== operador){
              salida.innerHTML+='<br>Carrier: '+ operador;
+             salidafile = salidafile +'Carrier: '+ operador + '\n';
           }
         }
   /*------------ Imprime informacion reparacion -----------------*/
         if("" !== condiciones){
            salida.innerHTML+='<br>Read: '+ condiciones +" and Customer agreed.";
+           salidafile = salidafile +'Read: '+ condiciones+ ' and Customer agreed.\n';
         }
         if("" !== aprovacion){
            salida.innerHTML+='<br> Approved by: '+ aprovacion;
+          salidafile = salidafile +'Approved by: '+ aprovacion+ + '\n';
         }
        salida.innerHTML+='<br>';
+       salidafile = salidafile +'\n\n';
+
   /*------------ Copia toda la informacion -----------------*/
         copiar(salida);
+       fs.appendFileSync(d2, salidafile, 'utf-8');
         break;
      }
    }
@@ -235,6 +254,6 @@ function camDic(){
 /*------------------- Asignacion de evento cambio ------------------------------*/
 window.addEventListener('load', function(){
    clonNotas();
+   existex();
    document.querySelector("#diccambio").addEventListener('click',camDic, false);
 },false);
-
