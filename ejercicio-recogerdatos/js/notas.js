@@ -196,7 +196,7 @@ function infocliente(arg){
           }
         }
   /*------------ Imprime informacion dispositivo -----------------*/
-        if("" !== sn ||"" !== origen || "" !== modelo || "" !== operador){
+        if("" !== sn || "" !== modelo || "" !== operador){
           salida.innerHTML+='<br><b>HTC Device</b>';
           salidafile = salidafile +'\nHTC Device\n';
           if("" !== sn){
