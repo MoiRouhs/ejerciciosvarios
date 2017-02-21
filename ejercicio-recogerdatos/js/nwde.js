@@ -10,7 +10,7 @@ var d = path.join(os.homedir(),"Desktop","History");
 
 function crearArchivo(){
   var fi = new Date();
-  var fechai = fi.getDate() +"-"+ (fi.getMonth()+1) +"-"+fi.getFullYear();
+  var fechai = fi.getFullYear() +"-"+ (fi.getMonth()+1) +"-"+ fi.getDate();
   return fechai ;
 };
 
