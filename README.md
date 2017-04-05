@@ -28,5 +28,6 @@ set fileencoding=utf-8
 set fileencodings=ucs-bom,utf8,prc
 set cursorline
 set cursorcolumn
+set gfn=Monospace-Bold\ 12 
 
 [Colores del editor](http://vimcolors.com/)
