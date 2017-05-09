@@ -69,11 +69,11 @@ set hlsearch
 ### Extensiones
 * **Explorador de archivos:**
 
-     **[EasyTree](https://github.com/troydm/easytree.vim), comando principal** :EasyTree
+     **[EasyTree](https://github.com/troydm/easytree.vim), (necesita python) comando principal** :EasyTree
      
      **[Opsplorer](https://github.com/pschiel/opsplorer), comando principal** f10
 
-* **Terminal en una ventana:** [Conque-GDB](https://github.com/vim-scripts/Conque-GDB)
+* **Terminal en una ventana:** [Conque-GDB](https://github.com/vim-scripts/Conque-GDB), (necesita python)
 
      **Comando principal** :ConqueTermSplit bash
 
