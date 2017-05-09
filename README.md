@@ -67,14 +67,18 @@ set hlsearch
 ### Colores del editor
 * [página de temas](http://vimcolors.com/)
 ### Extensiones
-* **Explorador de archivos:** [EasyTree](https://github.com/troydm/easytree.vim)
+* **Explorador de archivos:**
 
-     **Comando principal** :EasyTree
+     **[EasyTree](https://github.com/troydm/easytree.vim), comando principal** :EasyTree
+     
+     **[Opsplorer](https://github.com/pschiel/opsplorer), comando principal** f10
 
 * **Terminal en una ventana:** [Conque-GDB](https://github.com/vim-scripts/Conque-GDB)
 
-     **Comando principal** :ConqueTerm bash
+     **Comando principal** :ConqueTermSplit bash
 
 * **Mini mapa del código:** [Minimap-vim](https://github.com/koron/minimap-vim)
 
      **Comando principal** :MinimapSync
+     
+* **Auto completado:** [AutoComplPop](https://github.com/vim-scripts/AutoComplPop) 
