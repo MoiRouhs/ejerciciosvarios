@@ -72,13 +72,17 @@ set hlsearch
      **[EasyTree](https://github.com/troydm/easytree.vim), (necesita python) comando principal** :EasyTree
      
      **[Opsplorer](https://github.com/pschiel/opsplorer), comando principal** f10
-
-* **Terminal en una ventana:** [Conque-GDB](https://github.com/vim-scripts/Conque-GDB), (necesita python)
-
-     **Comando principal** :ConqueTermSplit bash
-
-* **Mini mapa del código:** [Minimap-vim](https://github.com/koron/minimap-vim)
-
-     **Comando principal** :MinimapSync
      
-* **Auto completado:** [AutoComplPop](https://github.com/vim-scripts/AutoComplPop) 
+     **[NERDTree](https://github.com/scrooloose/nerdtree), comando principal** NERDTree
+
+* **Terminal en una ventana:** 
+      
+     **[Conque-GDB](https://github.com/vim-scripts/Conque-GDB), (necesita python) comando principal** :ConqueTermSplit bash
+
+* **Mini mapa del código:** 
+    
+    **[Minimap-vim](https://github.com/koron/minimap-vim) Comando principal** :MinimapSync
+     
+* **Auto completado:** 
+
+    **[AutoComplPop](https://github.com/vim-scripts/AutoComplPop)** 
