@@ -2,8 +2,9 @@
 
 Diferentes cositas que desarrollo
 
-### Mi configuración VIM
 --------------------
+### Mi configuración VIM
+
 set nocompatible
 
 set ruler
@@ -44,12 +45,13 @@ colorscheme monokai-phoenix
 
 set enc=utf-8
 
+set foldmethod=indent
+
 set fileencoding=utf-8
 
 set fileencodings=ucs-bom,utf8,prc
 
 set cursorline
-
 
 set cursorcolumn
 
@@ -60,5 +62,19 @@ set mouse=a
 set incsearch
 
 set hlsearch
+
 ---------------------
-[Colores del editor](http://vimcolors.com/)
+### Colores del editor
+* [página de temas](http://vimcolors.com/)
+### Extensiones
+* **Explorador de archivos:** [EasyTree](https://github.com/troydm/easytree.vim)
+
+     **Comando principal** :EasyTree
+
+* **Terminal en una ventana:** [Conque-GDB](https://github.com/vim-scripts/Conque-GDB)
+
+     **Comando principal** :ConqueTerm bash
+
+* **Mini mapa del código:** [Minimap-vim](https://github.com/koron/minimap-vim)
+
+     **Comando principal** :MinimapSync
