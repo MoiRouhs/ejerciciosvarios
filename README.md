@@ -13,6 +13,12 @@ set nu
 
 set wrap
 
+set linebreak
+
+set textwidth=0
+
+set formatoptions-=tc
+
 set tabstop=2
 
 set sw=2
@@ -27,11 +33,9 @@ set copyindent
 
 set bs=2
 
-set columns=80
-
 set background=dark
 
-set wrapmargin=4
+set wrapmargin=2
 
 set nobk
 
