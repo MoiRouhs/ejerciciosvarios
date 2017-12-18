@@ -39,7 +39,8 @@ var copo =function(xp,yp,id){
 };
 /*---------------SETUP-----------------*/
 function setup() { 
-  createCanvas(700, 500);
+  var lienzo = createCanvas(700, 500);
+  lienzo.id("masthead");
   copito = new copo(random(0,400),random(1,50));
   for(i = 0; i <150; i++ ){
   	nieve[i] = copito = new copo(random(0,width),random(0, (-height -250)),i);
