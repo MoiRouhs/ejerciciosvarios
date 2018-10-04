@@ -1,0 +1,61 @@
+"Mi configuración personal VIM
+set nocompatible
+
+" Información del cursos y de combinación de teclas
+set ruler
+set showcmd
+
+" Información de espacios y tabulación
+set expandtab
+set tabstop=2
+set sw=2
+set autoindent
+set smartindent
+set copyindent
+set shiftround
+set smarttab
+
+" Texto
+set enc=utf-8
+set gfn=Monospace:h12:b "W set gfn=Consolas:h12:b
+set fileencoding=utf-8
+syntax on
+set foldmethod=indent
+
+" Busqueda
+set incsearch
+set hlsearch
+set sm
+
+"Cursor y mause
+set mouse=a
+set cursorline
+set cursorcolumn
+
+"Linea
+set wrap
+set linebreak
+set wrapmargin=2
+"set textwidth=0
+set nu 
+
+"Apariencia
+set background=dark
+colorscheme SerialExperimentsLain
+
+"Ortografía
+set spell
+
+
+"Otros
+set formatoptions-=tc
+set cindent
+set bs=2
+
+" Ortografía
+set spell
+
+"Atajos de teclado
+nmap <F1> <ESC>:NERDTree<CR> 
+nmap <F2> <ESC>:setlocal spell spelllang=es<CR>
+nmap <F3> <ESC>:setlocal spell spelllang=fr<CR>
