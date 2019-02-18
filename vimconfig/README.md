@@ -21,3 +21,4 @@
 * **Auto completado:** 
 
     **[AutoComplPop](https://github.com/vim-scripts/AutoComplPop)** 
+* **[Diccionarios](http://ftp.vim.org/vim/runtime/spell/)**
