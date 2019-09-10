@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>VueJs Ejemplos</title>
+  </head>
+  <body>
+    <div id="saludo">
+      {{mensaje}}
+    </div>
+    <div id="enlazar-atributo">
+      <span v-bind:title="aviso">
+        {{mensaje}}
+      </span>
+      <img v-bind:src='imagen' />
+    </div>
+    <div id="controlador-componente">
+        <nombres nombre='Juan' apellido='Perez'></nombres>
+        <nombres nombre='Luis' apellido='Chavez'></nombres>
+    </div>
+    <script src="js/vue.js"> </script>
+    <script src="js/saludo.js"> </script>
+  </body>
+</html>
