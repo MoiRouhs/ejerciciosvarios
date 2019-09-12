@@ -1,0 +1,21 @@
+.uk-navbar-container:not(.uk-navbar-transparent){
+  background:rgba(246, 242, 240,0.2);
+  box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.65);
+  height:60px;
+}
+.uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle{
+  min-height: 40px;
+}
+
+.logo-user{
+  width:40px;
+}
+#cabecera{
+  position: fixed;
+  /*float:right;*/
+  top:0;
+  left:0;
+  width:100%;
+  z-index: 10;
+}
+
